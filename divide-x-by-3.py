@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[ ]:
 
 
 def is_divisible_by_3(x):
@@ -19,16 +19,3 @@ try:
         print(f"No, 3 cannot divide {x}.")
 except ValueError:
     print("Please enter a valid integer.")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
