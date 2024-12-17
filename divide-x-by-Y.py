@@ -4,19 +4,19 @@
 # In[ ]:
 
 
-def is_divisible_by_3(x):
+def is_divisible_by_y(x):
     """Check if 3 can divide x without a remainder."""
-    if x % 3 == 0:
+    if x % y == 0:
         return True
     return False
 
 # Input from the user
 try:
     x = int(input("Enter a number: "))
-    if is_divisible_by_3(x):
-        print(f"Yes, 3 can divide {x}.")
+    y = int(input("Enter a divider: "))
+    if is_divisible_by_y(x):
+        print(f"Yes, {y} can divide {x}.")
     else:
-        print(f"No, 3 cannot divide {x}.")
+        print(f"No, {y} cannot divide {x}.")
 except ValueError:
     print("Please enter a valid integer.")
-
