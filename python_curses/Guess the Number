@@ -1,0 +1,8 @@
+import random
+while 5 != 6:
+    secret_number = random.randint(1, 2)
+    user_number = int(input("Whats the magic number?:"))
+    if user_number != secret_number:
+        print("Ha ha! You're stuck in my loop!")
+    else:
+        print("Well done, muggle! You are free now. it was" , secret_number)
