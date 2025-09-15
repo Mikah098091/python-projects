@@ -1,0 +1,18 @@
+current_num = int(input("please enter a number:"))
+steps = 0
+
+while current_num != 1:
+    
+    if current_num % 2 == 0:
+        current_num = current_num / 2
+        #if Even
+    else:
+        current_num = current_num * 3 + 1
+        #if Odd
+        
+    print(current_num)
+    steps += 1
+    
+print("steps =",steps)
+    
+   
