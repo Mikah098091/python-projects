@@ -1,0 +1,7 @@
+chupacabra = "chupacabra"  # the secret word
+exit_secret = ""           # initialize with something not equal
+
+while exit_secret != chupacabra:
+    exit_secret = input("Enter the secret word to exit: ")
+
+print("You've successfully left the loop.")
