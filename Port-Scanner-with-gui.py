@@ -24,11 +24,11 @@ class PRTScannerGUI(ctk.CTk):
         self.end_port_entry = ctk.CTkEntry(self, placeholder_text="End Port")
         self.end_port_entry.grid(row=1, column=2, padx=10, pady=10)
 
-        # === Result Display ===
+
         self.result_box = ctk.CTkTextbox(self, height=180, width=460)
         self.result_box.grid(row=2, column=0, columnspan=3, padx=10, pady=10)
 
-        # === Buttons ===
+
         self.scan_button = ctk.CTkButton(self, text="SCAN", command=self.start_scan_thread)
         self.scan_button.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
 
@@ -86,3 +86,4 @@ class PRTScannerGUI(ctk.CTk):
 if __name__ == "__main__":
     app = PRTScannerGUI()
     app.mainloop()
+
