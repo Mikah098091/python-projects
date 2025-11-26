@@ -25,21 +25,20 @@ file_extensions = {
     'wmv': 'Videos'
 }
 
-# destination cache so we don't keep joining the same paths
+
 destinations = {}
 
-# get an iterator over the directory entries
+
 entries = list(os.scandir(desktop))
 i = 0
 while i < len(entries):
     entry = entries[i]
     i += 1
 
-    # skip directories
     if entry.is_dir():
         continue
 
-    # figure out extension
+
     parts = entry.name.rsplit('.', 1)
     if len(parts) == 2:
         ext = parts[1].lower()
@@ -48,7 +47,7 @@ while i < len(entries):
 
     folder_name = file_extensions.get(ext, "Others")
 
-    # compute or reuse the destination folder
+
     if folder_name not in destinations:
         path = os.path.join(desktop, folder_name)
         os.makedirs(path, exist_ok=True)
@@ -56,5 +55,6 @@ while i < len(entries):
 
     target = os.path.join(destinations[folder_name], entry.name)
 
-    # move file
+
     shutil.move(entry.path, target)
+
